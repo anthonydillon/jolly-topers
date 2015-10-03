@@ -7,6 +7,7 @@
     <meta name="keywords" content="" />
     <meta name="author" content="Canonical webteam" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" type="image/x-icon" />
 
     <title>Jolly Topers FC</title>
 
