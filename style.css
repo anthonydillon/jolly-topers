@@ -1,0 +1,210 @@
+/*
+Theme Name: Jolly Topers FC
+Author: Anthony Dillon
+Description: The Jolly Topers FC wordpress theme
+Version: 0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: orange, black, white, football
+Text Domain: jollytopersfc
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* Header */
+
+.site-banner {
+	padding-top: 40px;
+}
+
+header.banner {
+	background: rgba(0, 0, 0, 0.7);
+	border: 0;
+}
+
+.background {
+	background: url('/jolly-topers/wp-content/themes/topers/img/team-pic-dark.jpg') no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.banner .nav-primary {
+	display: flex;
+}
+
+.banner .nav-primary ul {
+	display: block;
+  margin: 0 auto;
+}
+
+.banner .nav-primary ul li:last-child,
+.banner .nav-primary ul li {
+	border: 0;
+}
+.banner .nav-primary ul li a,
+.banner .nav-primary ul li a:link,
+.banner .nav-primary ul li a:visited {
+	border: 0;
+	color: #ffffff;
+	padding: 20px 30px;
+}
+
+.banner .nav-primary ul li a:hover,
+.banner .nav-primary ul li a:link:hover,
+.banner .nav-primary ul li a:visited:hover {
+	background-color: rgba(221, 72, 20, .3);
+}
+
+header.banner .logo img {
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+header.banner .logo span {
+	position: relative;
+	top: 2px;
+}
+
+.sponsors__image {
+	height: 50px;
+}
+
+.social-media__link,
+.sponsors__image {
+	transition: opacity .3s;
+	opacity: .8;
+}
+
+.social-media__link:hover,
+.sponsors__image:hover {
+	opacity: .95;
+	text-decoration: none;
+}
+
+.social-media__image {
+	vertical-align: middle;
+	position: relative;
+	top: -1px;
+	margin-right: 5px;
+}
+
+.social-media__link {
+	color: #ffffff;
+	float: right;
+}
+
+.badge__image {
+	width: 70%;
+}
+
+.row-hero {
+	color: #fff;
+}
+
+.next-match {
+	border-top: 3px solid #dd4814;
+	background: url('/jolly-topers/wp-content/themes/topers/img/upcoming-event-background.jpg') no-repeat;
+	background-position: center;
+	padding-top: 30px;
+	padding-bottom: 13px;
+}
+.next-match li {
+	color: #ffffff;
+	font-size: 24px;
+	margin-bottom: 0;
+}
+.next-match img {
+	height: 40px;
+	vertical-align: middle;
+}
+
+.next-match-details {
+	background: #dd4814;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #ffffff;
+	line-height: 20px;
+}
+
+.next-match-details ul,
+.next-match-details li {
+	margin-bottom: 0;
+}
+
+.next-match-details .when {
+	background: url('/jolly-topers/wp-content/themes/topers/img/calendar-icon.png') no-repeat;
+	background-size: 20px;
+	padding-left: 30px;
+}
+
+.next-match-details .where {
+	background: url('/jolly-topers/wp-content/themes/topers/img/location-icon.png') no-repeat;
+	background-size: 20px;
+	padding-left: 30px;
+}
+
+.players {
+	background-image: url('/jolly-topers/wp-content/themes/topers/img/team-bg.jpg');
+  background-position: 50% -54.9px;
+	color: #ffffff;
+}
+.player__details {
+	margin-top: 10px;
+}
+.player__link {
+	background: #dd4814;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	top: 0;
+	left: 0;
+	display: block;
+	border-radius: 50%;
+}
+.player__image {
+	opacity: 1;
+	transition: opacity .3s;
+	margin-bottom: -3px;
+	border-radius: 50%;
+}
+.player__image:hover {
+	opacity: .7;
+	border-radius: 50%;
+}
+.player__number {
+	float: left;
+	font-size: 50px;
+	margin-right: 15px;
+}
+.player__name {
+	font-size: 18px;
+	position: relative;
+	top: 10px;
+}
+.player__position {
+	margin-top: 5px;
+	font-size: 14px;
+	position: relative;
+	top: 10px;
+}
+/* Utils */
+
+.row {
+	border-bottom: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+footer.global {
+	background-color: #262626;
+	color: #ffffff;
+}
+
+footer.global a:link,
+footer.global a:visited,
+footer.global p {
+	color: #ffffff;
+}
