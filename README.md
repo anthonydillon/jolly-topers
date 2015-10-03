@@ -1,1 +1,1 @@
-# jolly-topers
+# Jolly Topers FC wordpress theme
