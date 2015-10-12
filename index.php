@@ -13,28 +13,44 @@
 
 <div class="wrapper">
 	<main id="main-content">
+	<?php $args = array(
+		'order'            => 'ASC',
+		'meta_key'         => 'date',
+		'meta_value'       => date('Ymd'),
+		'meta_compare'		 => '>',
+		'post_type'        => 'fixtures',
+		'post_status'      => 'publish'
+	);
+	$posts_array = get_posts( $args );
+	$i = 0;
+	$homeTeam = get_post_meta($posts_array[0]->ID, 'home_team', $single = true);
+	$awayTeam = get_post_meta($posts_array[0]->ID, 'home_team', $single = true);
+	$gameDate = get_post_meta($posts_array[0]->ID, 'date', $single = true);
+	$gameTime = get_post_meta($posts_array[0]->ID, 'time', $single = true);
+	$location = get_post_meta($posts_array[0]->ID, 'location', $single = true); ?>
 	<div class="row next-match">
 		<div class="inner-wrapper align-center">
 			<ul class="inline-list">
-				<li><img src="<?php bloginfo('template_directory'); ?>/img/jolly-topers-badge.png" alt="" /></li>
-				<li>Jolly Topers Reserves</li>
+				<li><img src="<?php bloginfo('template_directory'); ?><?php echo getTeamBadge($homeTeam); ?>" alt="" /></li>
+				<li><?php echo get_post_meta($posts_array[0]->ID, 'home_team', $single = true); ?></li>
 				<li>VS</li>
-				<li>Houghton Town</li>
-				<li><img src="<?php bloginfo('template_directory'); ?>/img/generic-sheild.png" alt="" /></li>
+				<li><?php echo get_post_meta($posts_array[0]->ID, 'away_team', $single = true); ?></li>
+				<li><img src="<?php bloginfo('template_directory'); ?><?php echo getTeamBadge($awayTeam); ?>" alt="" /></li>
 			</ul>
 		</div>
 	</div>
 	<div class="row next-match-details">
 		<div class="inner-wrapper align-center">
 			<ul class="inline-list">
-				<li class="when">03 Sep 2016 - 10:30</li>
-				<li class="where">Beverley Road, Luton, Beds LU4 8EU</li>
+				<li class="when"><?php echo date("d M Y", strtotime($gameDate)) . ' - ' . $gameTime; ?></li>
+				<li class="where"><?php echo $location['address']; ?></li>
 			</ul>
 		</div>
 	</div>
+	<?php	wp_reset_postdata();?>
 	<div class="row">
 		<div class="inner-wrapper">
-			<div class="seven-col append-one">
+			<div class="seven-col">
 				<h2>Recent News</h2>
 				<?php if ( have_posts() ) : ?>
 
@@ -72,17 +88,17 @@
 				endif;
 				?>
 			</div>
-			<div class="four-col last-col">
+			<div class="five-col last-col">
 
 				<h3>Division 2 - League table</h3>
-				<div id="lrep538090342" style="width: 350px;">Data loading....<a href="http://full-time.thefa.com/Index.do?divisionseason=228322435">click here for Division 2</a><br/><br/><a href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+				<div id="lrep538090342">Data loading....<a href="http://full-time.thefa.com/Index.do?divisionseason=228322435">click here for Division 2</a><br/><br/><a href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
 				<script language="javascript" type="text/javascript">
 				var lrcode = '538090342'
 				</script>
 				<script language="Javascript" type="text/javascript" src="http://full-time.thefa.com/client/api/cs1.js"></script>
 
 				<h3>Division 3 - League table</h3>
-				<div id="lrep636305268" style="width: 350px;">Data loading....<a href="http://full-time.thefa.com/Index.do?divisionseason=905999598">click here for Premier Division</a><br/><br/><a href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+				<div id="lrep636305268">Data loading....<a href="http://full-time.thefa.com/Index.do?divisionseason=905999598">click here for Premier Division</a><br/><br/><a href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
 				<script language="javascript" type="text/javascript">
 				var lrcode = '636305268'
 				</script>
@@ -96,46 +112,48 @@
 				<a class="right button--secondary" href="players">View all players</a>
 				<h2>Players</h2>
 			</div>
-			<div class="three-col">
-				<a class="player__link" href="">
-					<img class="player__image" src="http://localhost/jolly-topers/wp-content/uploads/2015/10/lee-hayward.jpg" alt=""/>
-				</a>
-				<div class="player__details">
-					<div class="player__number">09</div>
-					<div class="player__name">Lee Hayward</div>
-					<div class="player__position">Striker</div>
+			<?php $args = array(
+				'posts_per_page'   => 4,
+				'offset'           => 0,
+				'category'         => '',
+				'category_name'    => '',
+				'orderby'          => 'rand',
+				'order'            => 'DESC',
+				'include'          => '',
+				'exclude'          => '',
+				'meta_key'         => '',
+				'meta_value'       => '',
+				'post_type'        => 'players',
+				'post_status'      => 'publish',
+				'suppress_filters' => true
+			);
+			$posts_array = get_posts( $args );
+			$i = 0;
+			foreach ( $posts_array as $post ) : setup_postdata( $post );
+				$i++;
+				?>
+
+				<div class="three-col <?php if( $i == 4 ) { echo 'last-col'; } ?>">
+					<a class="player__link" href="<?php the_permalink(); ?>">
+						<?php // if there's a thumbnail
+						$image = get_post_meta($post->ID, 'player_image', $single = true);
+						$attachment_id = $image; // attachment ID
+
+						$image_attributes = wp_get_attachment_image_src( $attachment_id, 500 ); // returns an array
+						if( $image_attributes ) {
+						?>
+						<img class="player__image" src="<?php echo $image_attributes[0]; ?>" width="500" height="500">
+						<?php } ?>
+					</a>
+					<div class="player__details">
+							<div class="player__number"><?php echo get_post_meta($post->ID, 'player_number', $single = true); ?></div>
+						<div class="player__name"><?php the_title(); ?></div>
+						<div class="player__position"><?php echo get_post_meta($post->ID, 'player_position', true)[0];	?>
+						</div>
+					</div>
 				</div>
-			</div>
-			<div class="three-col">
-				<a class="player__link" href="">
-					<img class="player__image" src="http://localhost/jolly-topers/wp-content/uploads/2015/10/kyle-gooch.jpg" alt=""/>
-				</a>
-				<div class="player__details">
-					<div class="player__number">10</div>
-					<div class="player__name">Kyle Gooch</div>
-					<div class="player__position">Striker</div>
-				</div>
-			</div>
-			<div class="three-col">
-				<a class="player__link" href="">
-					<img class="player__image" src="http://localhost/jolly-topers/wp-content/uploads/2015/10/scott1.jpg" alt=""/>
-				</a>
-				<div class="player__details">
-					<div class="player__number">02</div>
-					<div class="player__name">Scott Weymouth</div>
-					<div class="player__position">Defender</div>
-				</div>
-			</div>
-			<div class="three-col last-col">
-				<a class="player__link" href="">
-					<img class="player__image" src="http://localhost/jolly-topers/wp-content/uploads/2015/10/rob-hennem.jpg" alt=""/>
-				</a>
-				<div class="player__details">
-					<div class="player__number">04</div>
-					<div class="player__name">Rob Hennem</div>
-					<div class="player__position">Defender</div>
-				</div>
-			</div>
+			<?php endforeach;
+			wp_reset_postdata();?>
 		</div>
 	</div>
 
