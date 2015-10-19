@@ -3,8 +3,14 @@
     <footer class="global clearfix no-global">
       <nav id="main-navigation" role="navigation" class="clearfix">
         <div class="legal clearfix has-cookie">
-            <p class="twelve-col">&copy; <?php echo date("Y") ?> Jolly Topers FC</p>
-            <span class="accessibility-aid"><a href="#">Got to the top of the page</a></span>
+						<div class="ten-col">
+							<br/><br/>
+	            <p>Copyright (c) <?php echo date("Y") ?> by Jolly Topers FC. All Rights Reserved.</p><br/>
+							<p>Contact us by email: <a href="mailto:contact@jollytopersfc.co.uk">contact@jollytopersfc.co.uk</a></p>
+						</div>
+            <div class="two-col last-col">
+							<img src="<?php bloginfo('template_directory'); ?>/img/jolly-topers-badge-footer.png" alt="" />
+						</div>
         </div>
       </nav>
     </footer>

@@ -13,8 +13,8 @@
 
     <!-- stylesheets -->
     <link rel="stylesheet" type="text/css" media="screen" href="https://assets.ubuntu.com/v1/vanilla-framework-version-0.0.55.min.css" />
-    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic%7CUbuntu+Mono' rel='stylesheet' type='text/css' />
-		<link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('template_directory'); ?>/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('template_directory'); ?>/style.css" />
 </head>
 
 <body>
@@ -45,7 +45,7 @@
                   <li><a href="/jolly-topers/players">Players</a></li>
                   <li><a href="/jolly-topers/fixtures">Fixtures</a></li>
                   <li><a href="/jolly-topers/news">News</a></li>
-                  <li><a href="/jolly-topers/contact">Contact</a></li>
+                  <!-- <li><a href="/jolly-topers/gallery">Gallery</a></li> -->
               </ul>
           </nav>
           <div class="nav-toggle">

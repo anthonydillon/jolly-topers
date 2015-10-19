@@ -30,7 +30,7 @@ function remove_menus(){
 add_action( 'admin_menu', 'remove_menus' );
 
 function getTeamBadge($teamName) {
-  if (strpos($teamName,'Jolly Topers') !== false) {
+  if (strpos($teamName, 'Jolly Topers') !== false) {
     return '/img/jolly-topers-badge.png';
   } else {
     return '/img/generic-sheild.png';

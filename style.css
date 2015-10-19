@@ -12,6 +12,15 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
+/*
+ * Core
+ */
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
+
 /* Header */
 
 .site-banner {
@@ -48,6 +57,18 @@ header.banner {
 	border: 0;
 	color: #ffffff;
 	padding: 20px 30px;
+}
+
+@media screen and (max-width: 768px) {
+	.banner .nav-primary ul li a,
+	.banner .nav-primary ul li a:link,
+	.banner .nav-primary ul li a:visited {
+		color: #333;
+	}
+}
+
+.banner .nav-toggle {
+	display: none;
 }
 
 .banner .nav-primary ul li a:hover,
@@ -114,6 +135,11 @@ header.banner .logo span {
 	font-size: 24px;
 	margin-bottom: 0;
 }
+
+.next-match__vs {
+	font-weight: 700;
+}
+
 .next-match img {
 	height: 40px;
 	vertical-align: middle;
@@ -194,17 +220,120 @@ header.banner .logo span {
 	border-bottom: 0;
 }
 
+.row.border {
+	border-bottom: 1px dotted #888;
+}
+
 img {
 	max-width: 100%;
 }
 
 footer.global {
 	background-color: #262626;
-	color: #ffffff;
+	color: #eee;
+	font-weight: 500;
 }
 
 footer.global a:link,
 footer.global a:visited,
 footer.global p {
 	color: #ffffff;
+}
+
+/*
+ * Fixture list
+ */
+
+.fixture__list-item {
+	background: #f7f7f7;
+	margin-bottom: 0;
+	padding: 20px;
+	font-weight: 400;
+	color: #666;
+}
+
+.fixture__list-item:nth-child(2n) {
+	background: #d4d4d4;
+}
+
+.fixture__team-badge {
+	height: 30px;
+	width: 30px;
+	vertical-align: middle;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.fixture__match-date,
+.fixture__home-team,
+.fixture__away-team,
+.fixture__match-report,
+.fixture__score {
+	margin-bottom: 0;
+}
+
+.fixture__home-team,
+.fixture__away-team {
+	white-space: nowrap;
+}
+
+.fixture__home-team {
+	text-align: right;
+}
+
+.fixture__score {
+	text-align: center;
+	font-weight: 700;
+	color: #666;
+}
+
+.fixture__score-vs {
+	padding-left: 5px;
+	padding-right: 5px;
+	color: #888;
+}
+
+
+
+@media screen and (max-width: 768px) {
+	.sponsors,
+	.social-media {
+		text-align: center;
+	}
+
+	.social-media__link {
+		float: none;
+		margin-bottom: 1em;
+	}
+
+	.inline-list li.where,
+	.inline-list li.when,
+	.inline-list li.next-match__vs {
+		box-sizing: border-box;
+		display: inline-block;
+		width: 100%;
+		padding-bottom: 5px;
+	}
+
+	footer.global {
+		padding-top: 0;
+	}
+
+	.fixture__match-date {
+		margin-bottom: 1em;
+	}
+
+	.fixture__match-report {
+		margin-top: 1em;
+	}
+
+	.fixture__match-date,
+	.fixture__home-team,
+	.fixture__away-team,
+	.fixture__match-report,
+	.fixture__match-report a,
+	.fixture__score {
+		text-align: center;
+		float: none;
+	}
 }
