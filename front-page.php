@@ -135,6 +135,7 @@ get_header(); ?>
 						<?php // if there's a thumbnail
 						$image = get_post_meta($post->ID, 'player_image', $single = true);
 						$attachment_id = $image; // attachment ID
+						$position = get_post_meta($post->ID, 'player_position', true);
 
 						$image_attributes = wp_get_attachment_image_src( $attachment_id, 500 ); // returns an array
 						if( $image_attributes ) {
@@ -145,7 +146,7 @@ get_header(); ?>
 					<div class="player__details">
 							<div class="player__number"><?php echo get_post_meta($post->ID, 'player_number', $single = true); ?></div>
 						<div class="player__name"><?php the_title(); ?></div>
-						<div class="player__position"><?php echo get_post_meta($post->ID, 'player_position', true)[0];	?>
+						<div class="player__position"><?php echo $position[0];	?>
 						</div>
 					</div>
 				</div>

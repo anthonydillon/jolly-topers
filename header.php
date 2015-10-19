@@ -40,11 +40,11 @@
       <header class="banner global" role="banner">
           <nav role="navigation" class="nav-primary nav-right" id="nav">
               <ul>
-                  <li><a href="/jolly-topers">Home</a></li>
-                  <li><a href="/jolly-topers/about">About</a></li>
-                  <li><a href="/jolly-topers/players">Players</a></li>
-                  <li><a href="/jolly-topers/fixtures">Fixtures</a></li>
-                  <li><a href="/jolly-topers/news">News</a></li>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/about">About</a></li>
+                  <li><a href="/players">Players</a></li>
+                  <li><a href="/fixtures">Fixtures</a></li>
+                  <li><a href="/news">News</a></li>
                   <!-- <li><a href="/jolly-topers/gallery">Gallery</a></li> -->
               </ul>
           </nav>
