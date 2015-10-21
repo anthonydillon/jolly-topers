@@ -7,6 +7,7 @@
 							<br/><br/>
 	            <p>Copyright (c) <?php echo date("Y") ?> by Jolly Topers FC. All Rights Reserved.</p><br/>
 							<p>Contact us by email: <a href="mailto:contact@jollytopersfc.co.uk">contact@jollytopersfc.co.uk</a></p>
+							<p>Website designed by <a href="http://www.anthonydillon.com">Anthony Dillon</a></p>
 						</div>
             <div class="two-col last-col">
 							<img src="<?php bloginfo('template_directory'); ?>/img/jolly-topers-badge-footer.png" alt="" />

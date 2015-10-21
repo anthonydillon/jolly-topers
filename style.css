@@ -87,6 +87,12 @@ header.banner .logo span {
 	top: 2px;
 }
 
+.sponsors__tag {
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #f8f8f8;
+}
+
 .sponsors__image {
 	height: 50px;
 }

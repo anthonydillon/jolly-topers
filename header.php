@@ -23,6 +23,7 @@
 
       <div class="site-banner row no-border">
         <div class="sponsors four-col">
+          <p class="sponsors__tag">Proud to be Sponsored by</p>
           <a href="http://stark-group.co.uk/">
             <img class="sponsors__image" src="<?php bloginfo('template_directory'); ?>/img/stark-logo.png" alt="" />
           </a>

@@ -17,9 +17,8 @@ get_header(); ?>
 		<div class="inner-wrapper">
 			<div class="eight-col prepend-two align-center">
 				<h1>Two teams. One dream.</h1>
-				<p>A football club in the North Home Counties football league. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita sequi, harum. Tenetur cumque dolorem laboriosam, similique dicta quaerat quasi quisquam vitae. Quasi placeat voluptates perferendis iure modi, ea animi ipsam.</p>
+				<p>A Bedfordshire based football club with a proud and growing history. We believe that a solid and cohesive group of players is the key to enjoying our football and breeding success.</p>
 			</div>
-
 		</div>
 	</div>
 </div>
