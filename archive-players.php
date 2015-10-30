@@ -49,7 +49,7 @@ get_header(); ?>
 			$i++;
 			?>
 
-		<div class="three-col <?php if( $i == 4 ) { echo 'last-col'; } ?>">
+		<div class="three-col <?php if( $i % 4 == 0) { echo 'last-col'; } ?>">
 			<a class="player__link" href="<?php the_permalink(); ?>">
 				<?php
 				$image = get_post_meta($post->ID, 'player_image', $single = true);
