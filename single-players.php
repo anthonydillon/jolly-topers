@@ -35,7 +35,13 @@ get_header(); ?>
   <div class="row strip-orange no-border">
 		<div class="inner-wrapper">
       <div class="two-col prepend-two no-margin-bottom">
+        <?php
+        if( $image_attributes ) {
+				?>
         <img class="player__image" src="<?php echo $image_attributes[0]; ?>" width="500" height="500">
+        <?php } else { ?>
+  				<img class="player__image" src="<?php bloginfo('template_directory'); ?>/img/empty-profile.jpg" width="500" height="500" alt="">
+  			<?php } ?>
       </div>
       <div class="seven-col last-col">
 				<h2 class="player-profile__name"><?php the_title(); ?></h2>

@@ -139,8 +139,10 @@ get_header(); ?>
 						$image_attributes = wp_get_attachment_image_src( $attachment_id, 500 ); // returns an array
 						if( $image_attributes ) {
 						?>
-						<img class="player__image" src="<?php echo $image_attributes[0]; ?>" width="500" height="500">
-						<?php } ?>
+							<img class="player__image" src="<?php echo $image_attributes[0]; ?>" width="500" height="500" alt="">
+		        <?php } else { ?>
+		  				<img class="player__image" src="<?php bloginfo('template_directory'); ?>/img/empty-profile.jpg" width="500" height="500" alt="">
+		  			<?php } ?>
 					</a>
 					<div class="player__details">
 							<div class="player__number"><?php echo get_post_meta($post->ID, 'player_number', $single = true); ?></div>
