@@ -34,18 +34,20 @@
         <div class="social-media four-col last-col">
           <a class="social-media__link" href="https://twitter.com/JollyTopersFC" class="right">
             <img class="social-media__image" src="<?php bloginfo('template_directory'); ?>/img/twitter.png" alt="" />
-            @JollyTopersFC
+          </a>
+          <a class="social-media__link" href="https://www.facebook.com/groups/405880769460410/" class="right">
+            <img class="social-media__image" src="<?php bloginfo('template_directory'); ?>/img/facebook.png" alt="" />
           </a>
         </div>
       </div>
       <header class="banner global" role="banner">
           <nav role="navigation" class="nav-primary nav-right" id="nav">
               <ul>
-                  <li><a href="/">Home</a></li>
-                  <li><a href="/about">About</a></li>
-                  <li><a href="/players">Players</a></li>
-                  <li><a href="/fixtures">Fixtures</a></li>
-                  <li><a href="/news">News</a></li>
+                  <li><a href="<?php echo site_url(); ?>/">Home</a></li>
+                  <li><a href="<?php echo site_url(); ?>/about">About</a></li>
+                  <li><a href="<?php echo site_url(); ?>/players">Players</a></li>
+                  <li><a href="<?php echo site_url(); ?>/fixtures">Fixtures</a></li>
+                  <li><a href="<?php echo site_url(); ?>/news">News</a></li>
                   <!-- <li><a href="/jolly-topers/gallery">Gallery</a></li> -->
               </ul>
           </nav>

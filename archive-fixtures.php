@@ -12,6 +12,13 @@
  /* Template Name: Page */
 
 get_header(); ?>
+<?php
+	$cate = 'first-team';
+	if(isset($_GET["team"])) {
+		$cate = $_GET["team"];
+	}
+	query_posts( array( 'post_type' => 'fixtures', 'category_name' => $cate, 'orderby' => 'date', 'order' => 'desc'));
+?>
 
 
 	<div class="row row-hero strip-dark no-border">
@@ -20,6 +27,18 @@ get_header(); ?>
 				<h1>Fixtures</h1>
 			</div>
 		</div>
+	</div>
+</div>
+<div class="row row-grey row-players-menu">
+	<div class="inner-wrapper">
+		<ul class="players-menu">
+			<li class="players-menu__item">
+				<a href="<?php echo site_url(); ?>/fixtures?team=first-team" <?php if(!$cate || $cate == 'first-team'){ echo 'class="active"';}?>>First team</a>
+			</li>
+			<li class="players-menu__item">
+				<a href="<?php echo site_url(); ?>/fixtures?team=reserve-team" <?php if($cate == 'reserve-team'){ echo 'class="active"';}?>>Reserve team</a>
+			</li>
+		</ul>
 	</div>
 </div>
 <div class="row">
@@ -45,9 +64,9 @@ get_header(); ?>
 				<li class="fixture__list-item clearfix">
 					<div class="two-col fixture__match-date"><?php echo date("d M", strtotime($gameDate)) . ' - ' . $gameTime; ?></div>
 					<div class="three-col fixture__home-team">
+						<?php echo $homeTeam ?>
 						<img class="fixture__team-badge" src="<?php bloginfo('template_directory'); ?>
 						<?php echo getTeamBadge($homeTeam); ?>" alt="" width="50" />
-						<?php echo $homeTeam ?>
 					</div>
 					<div class="two-col fixture__score">
 						<?php echo $homeScore; ?>
@@ -55,9 +74,9 @@ get_header(); ?>
 						<?php echo $awayScore; ?>
 					</div>
 					<div class="three-col fixture__away-team">
-						<?php echo $awayTeam ?>
 						<img class="fixture__team-badge" src="<?php bloginfo('template_directory'); ?>
 						<?php echo getTeamBadge($awayTeam); ?>" alt="" width="50" />
+						<?php echo $awayTeam ?>
 					</div>
 					<div class="two-col last-col fixture__match-report">
 						<?php if ($passed) { ?>

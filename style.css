@@ -343,3 +343,70 @@ footer.global p {
 		float: none;
 	}
 }
+
+
+/*
+ * Player profiles
+ */
+
+.strip-orange {
+	background: rgba(221, 72, 20, .6);
+	color: #fff;
+	padding: 20px;
+	margin-bottom: 0;
+}
+
+.player-profile__name {
+	padding-top: 25px;
+}
+
+.player-profile__number {
+	font-weight: 500;
+	display inline;
+	margin-right: 15px;
+	font-size: 25px;
+	float: left;
+}
+
+.player-profile__position {
+	display: inline;
+	font-size: 25px;
+}
+
+/*
+ * Player page
+ */
+.row-players-menu {
+	padding: 10px 0 0;
+}
+.players-menu {
+	list-style: none;
+	padding-left: 0;
+	text-transform: uppercase;
+}
+.players-menu a:link,
+.players-menu a:visited {
+		font-weight: 700;
+		color: #333;
+}
+.players-menu a:hover {
+	text-decoration: none;
+	color: #dd4814;
+}
+.players-menu a.active {
+	border-bottom: 3px solid #dd4814;
+}
+.players-menu li {
+	float: left;
+}
+.players-menu li:after {
+	content: '|';
+	position: relative;
+	top:-2px;
+	color: #888;
+	margin-left: 10px;
+	margin-right: 15px;
+}
+.players-menu li:last-of-type:after {
+	content: '';
+}

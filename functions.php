@@ -8,6 +8,7 @@ function create_post_type() {
         'singular_name' => __( 'Player' )
       ),
       'public' => true,
+      'taxonomies' => array('category'),
       'has_archive' => true,
     )
   );
@@ -19,6 +20,7 @@ function create_post_type() {
         'singular_name' => __( 'Fixture' )
       ),
       'public' => true,
+      'taxonomies' => array('category'), 
       'has_archive' => true,
     )
   );
