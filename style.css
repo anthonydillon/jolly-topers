@@ -133,6 +133,7 @@ header.banner .logo span {
 	border-top: 3px solid #dd4814;
 	background: url('/wp-content/themes/topers/img/upcoming-event-background.jpg') no-repeat;
 	background-position: center;
+	background-size: cover;
 	padding-top: 30px;
 	padding-bottom: 13px;
 }
