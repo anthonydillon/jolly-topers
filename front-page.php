@@ -86,17 +86,17 @@ get_header(); ?>
 			</div>
 			<div class="five-col last-col">
 
-				<h3>Division 2 - League table</h3>
-				<div id="lrep538090342">Data loading....<a href="http://full-time.thefa.com/Index.do?divisionseason=228322435">click here for Division 2</a><br/><br/><a href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+				<h3>Division 1 - League table</h3>
+				<div id="lrep514343971">Data loading....<a href="http://full-time.thefa.com/Index.do?divisionseason=703767485">click here for Division 1</a><br/><br/><a href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
 				<script language="javascript" type="text/javascript">
-				var lrcode = '538090342'
+				var lrcode = '514343971'
 				</script>
 				<script language="Javascript" type="text/javascript" src="http://full-time.thefa.com/client/api/cs1.js"></script>
 
-				<h3>Division 3 - League table</h3>
-				<div id="lrep636305268">Data loading....<a href="http://full-time.thefa.com/Index.do?divisionseason=905999598">click here for Premier Division</a><br/><br/><a href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
+				<h3>Division 2 - League table</h3>
+				<div id="lrep330818879">Data loading....<a href="http://full-time.thefa.com/Index.do?divisionseason=665739746">click here for Division 2</a><br/><br/><a href="http://www.thefa.com/FULL-TIME">FULL-TIME Home</a></div>
 				<script language="javascript" type="text/javascript">
-				var lrcode = '636305268'
+				var lrcode = '330818879'
 				</script>
 				<script language="Javascript" type="text/javascript" src="http://full-time.thefa.com/client/api/cs1.js"></script>
 			</div>
